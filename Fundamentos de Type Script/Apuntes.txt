@@ -1,0 +1,137 @@
+---DATOS DEL CURSO DE ANGULAR-----
+- DATOS DE JAVA SCRIPT FUNDAMENTOS
+VAR = 
+LET =
+CONST =
+
+---------------------TEMPLATE STRING----------------------
+
+const numero = (num1, num2) =>{
+    return `el numero es: ${num1 + num2}`
+}
+
+resultado = numero (10,20)
+console.log(resultado)
+
+---------------------OBJETOS-----------------------------
+
+const mascota = {
+    nombre: 'Lia',
+    edad: 10
+}
+
+mascota.id = 1
+
+const {edad} = mascota; \\DESTRUCTURIN OBJENT
+consolo.log(edad)
+
+const web = {
+    nombre: 'bluuweb',
+    link: {
+        enlace: 'www.pagina.com'
+    },
+    redesSociales:{
+        enlace: 'youtube',
+        nombre: 'facebook'
+    }
+}
+
+--------------------CONSUMIR APIS CON FETCH-------
+
+fetch("https://pokeapi.co/api/v2/pokemon/")
+  .then((respuesta) => respuesta.json())
+  .then((data) => {
+    console.log(data.respuesta);
+  })
+  .catch((error) => console.log(error));
+
+  ------------------ASYNC Y AWAIT-------------
+
+  const getPokemon = async () => {
+  try {
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
+    const data = await res.json();
+    console.log(data.results.map((pokemon) => pokemon));
+  } catch (error) {
+    console.log(error);
+  }
+};
+getPokemon();
+
+----------------------filter-----------------
+const getPokemon = async () => {
+  try {
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
+    const data = await res.json();
+    console.log(data.results.filter((pokemon) => pokemon.name === "bulbasaur"));
+  } catch (error) {
+    console.log(error);
+  }
+};
+getPokemon();
+
+-------------------------------TYPESCRIPTS--------------------------------------
+COMANDOS DE TYPESCRIPTS
+- npm install -g typescript Instalacion
+- TSC NOMBREARCHIVO -W = Convierte el archivo ts a json
+- TSC -INIT  = Inidcarle que el proyecto sera un Type SCRIPT
+- TSC -W = Despues de indicar el proyecto el comando de tsc -INIT
+
+TIPO DE VARIABLES:
+
+---- let texto:string;
+texto = 'Cadena de texto';
+
+---- let texto:number;
+texto = number;
+
+---- let texto:boolean;
+texto = 1/0;
+
+---- let texto:any;
+texto = mixta;
+
+Array[] ---- let texto:string[];---- let texto:number[];---- let texto:any[];---- let texto:boolean[];
+
+COMO REALIZAR LAS CLASES:
+
+---------CLASES
+
+IMPORTAR:
+import {Gato} from './gato'
+import {Perro} from './perro'
+
+En los documentos debemos de colocar antes de cada clase "export" y luego importamos en el main
+
+class calculadora{
+    
+    constructor(){
+        console.log('Iniciando Calculadora');
+    }
+
+    sumar(numero1:number, numero2:number){
+        return numero1 + numero2;
+    }
+}
+
+let clacA = new calculadora();
+let resultado = clacA.sumar(1,2);
+console.log(resultado);
+
+
+----------TABAJANDO CON VARIOS ARCHIVOS DE TYPE SCRIPT UTILIZANDO SYSTEMJS-----
+
+//Actuamente lo colocamos en le body
+<scripts>
+    SystemJS.config({
+        packages: {
+            "js": {
+                "main": "main",
+                "defaultExtension": "js"
+            }
+        }
+    });
+    System.import("js");
+</scripts>
+
+
