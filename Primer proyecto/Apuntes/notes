@@ -39,3 +39,8 @@ COMO FUNCIONA LA DIRECTIVA NGIF
 
 
 PARA INCLUIR CLASES DE CSS O ESTILOS POR MEDIO DE ANGULAR UTILIZAMOS [ngCLass]
+[ngClass]="activo ? 'd-block': 'd-none'"
+condicion ? condicion-verdadera : condicion-falsa
+
+He realizado la siguiente condición como alternativa [ngClass] = "activo=='primero'  ?  'd-block'  :  'd-none'"
+ (Lógica: si activo es == "string" entonces ? condición-verdadera : condición-falsa )
