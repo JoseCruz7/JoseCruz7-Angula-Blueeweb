@@ -16,3 +16,6 @@ COMO INSTALAR UN COMPONENTE O CREARLO
 - app.module.ts = Documento que lleva todas las importaciones de nuestros componentes
 - app.component.html = Componente principal donde se llevaran los otros modulos como tag para que se visualicen en el index
 
+COMO FUNCIONA LA DIRECTIVA NGIF
+ <p class="text-info" *ngIf = "false">
+ 
