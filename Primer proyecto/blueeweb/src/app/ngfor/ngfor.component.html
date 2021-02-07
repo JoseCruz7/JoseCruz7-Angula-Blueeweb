@@ -1,0 +1,23 @@
+<h1 class="container bg-dark text-white text-center my-4 py-4">[ngfor]</h1>
+<div class="container">
+    
+    <div class="table-responsive" ng-init="getAllPokemon()">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>name</th>
+                    <th>Url</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor= "let pokemon of dataArrayPokemon; index as i">
+                    <td>{{i}}</td>
+                    <td>{{pokemon.name}}</td>
+                    <td>{{pokemon.url}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
