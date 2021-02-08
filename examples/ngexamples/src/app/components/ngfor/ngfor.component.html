@@ -1,0 +1,21 @@
+<h1 class="container bg-dark text-white text-center">ngFor</h1>
+<div class="container">
+    <div class="table table-sm table-dark w-100">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>NAME</th>
+                <th>COUNT</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fruits of arrayFruits; index as i">
+                <td>{{i+1}}</td>
+                <td>{{fruits.name}}</td>
+                <td>{{fruits.count}}</td>
+                <td>{{fruits.status}}</td>
+            </tr>
+        </tbody>
+    </div>
+</div>
