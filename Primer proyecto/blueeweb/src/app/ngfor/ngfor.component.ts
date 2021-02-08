@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {PokemonService} from '../services/pokemon.service'
 @Component({
   selector: 'app-ngfor',
   templateUrl: './ngfor.component.html',
@@ -7,25 +7,15 @@ import { Component, OnInit } from '@angular/core';
  
 })
 export class NgforComponent implements OnInit {
-  dataArrayPokemon:Array<any>;
+  
+  title:string= "[ngFor]";
 
-  constructor() { 
+  constructor(public PokemonService: PokemonService) { 
     
   }
 
   ngOnInit(): void {
   }
 
-  getAllPokemon(): void {
-    async () => {
-      try {
-        const res = await fetch('https://pokeapi.co/api/v2/pokemon');
-        const data = await res.json();
-        this.dataArrayPokemon = data.results;
-      } catch (error) {
-        return error
-      }
-    }
-  }
 
 }
