@@ -48,3 +48,25 @@ const thisFuntion = {
         },1000)
     }
 }
+
+------------------- DESESTRUCTURACION DE UN OBJETO --------------------------
+
+    var name = avenger.name, key = avenger.key, power = avenger.power;
+    console.log(name + " \n " + key + " \n " + power + " ");
+
+    //EXTRAER ARGUMENTOS DE UN OBJETO DENTRO DE UNA VARIABLE DE FLECHA
+    var extract = function (_a) {
+        var name = _a.name, key = _a.key, power = _a.power;
+        console.log(name + " \n " + key + " \n " + power + " ");
+    };
+    extract(avenger);
+
+      /*PARA LA DES ESTRUCTURACION DE UN ARREGLO SE REALIZA CON LOS [] Y SE ESTABLE NOMBRE 
+    EN CADA POSICION PORE EJEMPLO CONST [1,2,3] PUEDE SER CUALQUIER NOVMBRE PERO APUNTARAN
+    A LA POSICION DEL ARREGO QUE SE ESTA APUNTANDO [UNOO, DOS, TRES]*/
+
+    cont extractArray = ([,,3]: string[]) =>{
+        console.log(3);
+    })
+
+    extractArray(array)
