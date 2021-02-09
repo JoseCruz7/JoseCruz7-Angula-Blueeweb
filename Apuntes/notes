@@ -119,3 +119,22 @@ console.log('Fin');
 getMoney(500).then(moneyInBanck => console.log(moneyInBanck)).catch(console.warn);
 
 })()
+
+
+
+/* -------------------------------------------------------------------------- */
+/*    Creacion de variables he inicializado directamente en el constructor    */
+/* -------------------------------------------------------------------------- */
+
+    class Avenger{
+        constructor(public name: string,
+                    public team: string,
+                    public realName: string,
+                    public figth: boolean,
+                    public winFigth: number
+                    ){
+
+        }
+    }
+
+    const antman: Avenger = new Avenger();
