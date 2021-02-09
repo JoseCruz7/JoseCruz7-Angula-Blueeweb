@@ -29,3 +29,22 @@ console.log(menssage);
 - DEFAULT
 */
 function active(who: string, moment?: string, object: string = 'Batiseñal') {}
+
+----------------FUNCIONES DE FLECHA QUE SE COLOCO EN LA ESTRUCTURA ES6--------
+const myArrow = (Arg1, Arg2) => Arg1 + Arg2;
+
+//El this tendra problemas ya que apunta al objeto del setTimeout
+POR ESO SE DEBE EJECUTAR UNA FUNCION DE FLECHA
+setTimeout(function(){
+    console.log(this.name) //This apunto al objeto 
+},1000) = Sirve para ejecutar un Callback
+
+
+const thisFuntion = {
+    name:'Ironman',
+    menssage(){
+        setTimeout(()=>{
+            console.log(`Poder del personaje ${this.name} dinero`)
+        },1000)
+    }
+}
