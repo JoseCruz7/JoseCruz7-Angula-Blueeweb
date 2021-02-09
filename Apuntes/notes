@@ -19,3 +19,13 @@ const year: number = 33;
 
 const menssage: string = `My name is: ${name} ${lastName} and my year is: ${year}`;
 console.log(menssage);
+
+
+---------ARGUMENTO DE UNA FUNCION DE FORMA OBLIGATORIA-OPCIONAL-DEFAULT-----
+//LOS NORMAL DE OS ARGUMENTOS ES QUE SE DECLAREN
+/*
+- OBLIGATORIOOS
+- OPCIONALES
+- DEFAULT
+*/
+function active(who: string, moment?: string, object: string = 'Batiseñal') {}
