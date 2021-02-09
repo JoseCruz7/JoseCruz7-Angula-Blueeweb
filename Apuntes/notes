@@ -1,0 +1,21 @@
+-------------------CREACION DE VARIABLES DE CLASES -------------------
+
+- let today : Date = new Date();
+- let spiderman: string | number | Date
+
+//Se establecer las propiedades de cada variable del objeto name: string, year:number
+- let object = {
+    name: 'peter',
+    year: 30
+}
+
+-------------------COMO IGNORAR ARCHIVOS DE TSC ---------------------------
+- Ruta tsconfig.json, se agrega una caracteristica "exclude": ["typesScript"], al principiio
+
+------------------- TEMPLATE STRING TYPESCRIPT ----------------------------
+const name: string = 'Jose Cruz';
+const lastName: string = 'Herrera';
+const year: number = 33;
+
+const menssage: string = `My name is: ${name} ${lastName} and my year is: ${year}`;
+console.log(menssage);
