@@ -138,3 +138,5 @@ getMoney(500).then(moneyInBanck => console.log(moneyInBanck)).catch(console.warn
     }
 
     const antman: Avenger = new Avenger();
+
+PARA EXPORTAR UNA CLASE SE DEBE DE COLOCAR EXPORT E IMPORT EN EL OTRO ARCHIVO
